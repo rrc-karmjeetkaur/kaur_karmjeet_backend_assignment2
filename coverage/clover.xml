@@ -1,17 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1758752607308" clover="3.2.0">
-  <project timestamp="1758752607308" name="All files">
-    <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1" elements="9" coveredelements="9" complexity="0" loc="8" ncloc="8" packages="1" files="1" classes="1"/>
-    <file name="app.ts" path="C:\Users\kaurs\kaur_karmjeet_backend_assignment2\src\app.ts">
-      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-      <line num="1" count="1" type="stmt"/>
-      <line num="2" count="1" type="stmt"/>
-      <line num="4" count="1" type="stmt"/>
-      <line num="6" count="1" type="stmt"/>
-      <line num="7" count="1" type="stmt"/>
-      <line num="9" count="1" type="stmt"/>
-      <line num="10" count="1" type="stmt"/>
-      <line num="13" count="1" type="stmt"/>
-    </file>
+<coverage generated="1758757127737" clover="3.2.0">
+  <project timestamp="1758757127737" name="All files">
+    <metrics statements="65" coveredstatements="46" conditionals="8" coveredconditionals="2" methods="19" coveredmethods="11" elements="92" coveredelements="59" complexity="0" loc="65" ncloc="65" packages="4" files="7" classes="7"/>
+    <package name="src">
+      <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="app.ts" path="C:\Users\kaurs\kaur_karmjeet_backend_assignment2\src\app.ts">
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="19" count="3" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.api.v1.routes">
+      <metrics statements="33" coveredstatements="21" conditionals="4" coveredconditionals="2" methods="7" coveredmethods="4"/>
+      <file name="branchRoutes.ts" path="C:\Users\kaurs\kaur_karmjeet_backend_assignment2\src\api\v1\routes\branchRoutes.ts">
+        <metrics statements="10" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+      </file>
+      <file name="employeeRoutes.ts" path="C:\Users\kaurs\kaur_karmjeet_backend_assignment2\src\api\v1\routes\employeeRoutes.ts">
+        <metrics statements="23" coveredstatements="12" conditionals="2" coveredconditionals="1" methods="5" coveredmethods="2"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="34" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.api.v1.services">
+      <metrics statements="18" coveredstatements="11" conditionals="4" coveredconditionals="0" methods="11" coveredmethods="6"/>
+      <file name="branchService.ts" path="C:\Users\kaurs\kaur_karmjeet_backend_assignment2\src\api\v1\services\branchService.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+      <file name="employeeService.ts" path="C:\Users\kaurs\kaur_karmjeet_backend_assignment2\src\api\v1\services\employeeService.ts">
+        <metrics statements="14" coveredstatements="7" conditionals="4" coveredconditionals="0" methods="8" coveredmethods="3"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="8" count="3" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="28" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.data">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="branches.ts" path="C:\Users\kaurs\kaur_karmjeet_backend_assignment2\src\data\branches.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="8" count="3" type="stmt"/>
+      </file>
+      <file name="employees.ts" path="C:\Users\kaurs\kaur_karmjeet_backend_assignment2\src\data\employees.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="11" count="3" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>

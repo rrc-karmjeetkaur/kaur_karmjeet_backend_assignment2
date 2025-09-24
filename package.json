@@ -41,7 +41,9 @@
     "preset": "ts-jest",
     "testEnvironment": "node",
     "testMatch": [
-      "**/test/**/*.test.ts"
-    ]
+      "**/src/test/**/*.test.ts"
+    ],
+    "moduleFileExtensions": ["ts", "js", "json"],
+    "roots": ["<rootDir>/src"]
   }
 }
