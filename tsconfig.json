@@ -1,25 +1,12 @@
 {
-    "compilerOptions": {
-        "target": "ES6",
-        "module": "commonjs",
-        "strict": true,
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true,
-        "outDir": "./dist",
-        "resolveJsonModule": true,
-        "noImplicitAny": true,
-        "strictNullChecks": true,
-        "strictPropertyInitialization": true,
-        "noImplicitThis": true,
-        "noUnusedParameters": true,
-        "noUnusedLocals": true,
-        "alwaysStrict": true,
-        "baseUrl": "./",
-        "paths": {
-            "*": ["*"]
-        }
-    },
-    "include": ["src/**/*", "test/**/*", "config/**/*"],
-    "exclude": ["node_modules", "dist"]
-}
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "outDir": "dist",
+    "rootDir": ".",        // <-- change rootDir to project root
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*", "test/**/*"],  // <-- include test folder
+} 
