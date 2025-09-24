@@ -1,12 +1,11 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ES6",
     "module": "commonjs",
+    "rootDir": "src",
     "outDir": "dist",
-    "rootDir": ".",        // <-- change rootDir to project root
     "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true
+    "esModuleInterop": true
   },
-  "include": ["src/**/*", "test/**/*"],  // <-- include test folder
-} 
+  "include": ["src/**/*"]
+}
