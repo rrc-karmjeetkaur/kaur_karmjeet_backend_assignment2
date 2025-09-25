@@ -1,4 +1,3 @@
-// src/app.ts
 import express from "express";
 import morgan from "morgan";
 
@@ -18,5 +17,11 @@ app.use("/api/v1/employees", employeeRoutes);
 app.use("/employees", employeeRoutes);   // <- add this
 app.use("/api/v1/branches", branchRoutes);
 app.use("/branches", branchRoutes);      // <- add this
+
+// Start server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+}); 
 
 export default app;
