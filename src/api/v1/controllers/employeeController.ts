@@ -66,6 +66,7 @@ export const createEmployee = (req: Request, res: Response) => {
   if (!name || !position || !department || !email || !phone || !branchId) {
     return res.status(400).json({ message: "All fields are required" });
   }
+  
 
   const newEmployee: Employee = {
     id: employees.length ? Math.max(...employees.map(e => e.id)) + 1 : 1,
@@ -106,3 +107,32 @@ export const deleteEmployee = (req: Request, res: Response) => {
   employees.splice(index, 1);
   res.status(200).json({ message: "Employee deleted successfully" });
 };
+export const getEmployeesByBranch = (req: Request, res: Response) => {
+  const branchId = parseInt(req.params.branchId);
+  if (!branchId) return res.status(400).json({ message: "Branch ID is required" });
+
+  const branchEmployees = employees.filter(e => e.branchId === branchId);
+
+  if (!branchEmployees.length) {
+    return res.status(404).json({ message: "No employees found for this branch" });
+  }
+
+  res.status(200).json(branchEmployees);
+};
+
+//  GET all employees by department
+export const getEmployeesByDepartment = (req: Request, res: Response) => {
+  const department = req.params.department;
+  if (!department) return res.status(400).json({ message: "Department is required" });
+
+  const departmentEmployees = employees.filter(
+    e => e.department.toLowerCase() === department.toLowerCase()
+  );
+
+  if (!departmentEmployees.length) {
+    return res.status(404).json({ message: "No employees found for this department" });
+  }
+
+  res.status(200).json(departmentEmployees);
+};
+
