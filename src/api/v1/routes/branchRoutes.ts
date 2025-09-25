@@ -1,16 +1,23 @@
-import express from "express";
-import { getAllBranches, getBranchById } from "../services/branchService";
+import { Router } from "express";
+import * as branchController from "../controllers/branchController";
 
-const router = express.Router();
+const router = Router();
 
-router.get("/", (req, res) => res.json(getAllBranches()));
+// Get all branches
+router.get("/", branchController.getAllBranches);
 
-router.get("/:id", (req, res) => {
-  const id = parseInt(req.params.id);
-  const branch = getBranchById(id);
-  if (branch) res.json(branch);
-  else res.status(404).json({ message: "Branch not found" });
-});
+// Get a branch by ID
+router.get("/:id", branchController.getBranchById);
+
+// Create a new branch
+router.post("/", branchController.createBranch);
+
+// Update a branch by ID
+router.put("/:id", branchController.updateBranch);
+
+//Delete a branch by ID
+router.delete("/:id", branchController.deleteBranch);
 
 export default router;
+
   
