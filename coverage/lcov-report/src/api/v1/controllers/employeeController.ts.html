@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">38.02% </span>
+                <span class="strong">54.92% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>27/71</span>
+                <span class='fraction'>39/71</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25% </span>
+                <span class="strong">36.11% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>9/36</span>
+                <span class='fraction'>13/36</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">38.46% </span>
+                <span class="strong">69.23% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>5/13</span>
+                <span class='fraction'>9/13</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">38.77% </span>
+                <span class="strong">61.22% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>19/49</span>
+                <span class='fraction'>30/49</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -311,32 +311,32 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">36x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">36x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Request, Response } from "express";
@@ -448,33 +448,33 @@ export const deleteEmployee = <span class="fstat-no" title="function not covered
 <span class="cstat-no" title="statement not covered" >  employees.splice(index, 1);</span>
 <span class="cstat-no" title="statement not covered" >  res.status(200).json({ message: "Employee deleted successfully" });</span>
 };
-export const getEmployeesByBranch = <span class="fstat-no" title="function not covered" >(r</span>eq: Request, res: Response) =&gt; {
-  const branchId = <span class="cstat-no" title="statement not covered" >parseInt(req.params.branchId);</span>
-<span class="cstat-no" title="statement not covered" >  if (!branchId) <span class="cstat-no" title="statement not covered" >return res.status(400).json({ message: "Branch ID is required" });</span></span>
+export const getEmployeesByBranch = (req: Request, res: Response) =&gt; {
+  const branchId = parseInt(req.params.branchId);
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (!branchId) <span class="cstat-no" title="statement not covered" >return res.status(400).json({ message: "Branch ID is required" });</span>
 &nbsp;
-  const branchEmployees = <span class="cstat-no" title="statement not covered" >employees.filter(<span class="fstat-no" title="function not covered" >e </span>=&gt; <span class="cstat-no" title="statement not covered" >e.branchId === branchId)</span>;</span>
+  const branchEmployees = employees.filter(e =&gt; e.branchId === branchId);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!branchEmployees.length) {</span>
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (!branchEmployees.length) {
 <span class="cstat-no" title="statement not covered" >    return res.status(404).json({ message: "No employees found for this branch" });</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  res.status(200).json(branchEmployees);</span>
+  res.status(200).json(branchEmployees);
 };
 &nbsp;
 //  GET all employees by department
-export const getEmployeesByDepartment = <span class="fstat-no" title="function not covered" >(r</span>eq: Request, res: Response) =&gt; {
-  const department = <span class="cstat-no" title="statement not covered" >req.params.department;</span>
-<span class="cstat-no" title="statement not covered" >  if (!department) <span class="cstat-no" title="statement not covered" >return res.status(400).json({ message: "Department is required" });</span></span>
+export const getEmployeesByDepartment = (req: Request, res: Response) =&gt; {
+  const department = req.params.department;
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (!department) <span class="cstat-no" title="statement not covered" >return res.status(400).json({ message: "Department is required" });</span>
 &nbsp;
-  const departmentEmployees = <span class="cstat-no" title="statement not covered" >employees.filter(</span>
-<span class="fstat-no" title="function not covered" >    e </span>=&gt; <span class="cstat-no" title="statement not covered" >e.department.toLowerCase() === department.toLowerCase()</span>
+  const departmentEmployees = employees.filter(
+    e =&gt; e.department.toLowerCase() === department.toLowerCase()
   );
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  if (!departmentEmployees.length) {</span>
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (!departmentEmployees.length) {
 <span class="cstat-no" title="statement not covered" >    return res.status(404).json({ message: "No employees found for this department" });</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  res.status(200).json(departmentEmployees);</span>
+  res.status(200).json(departmentEmployees);
 };
 &nbsp;
 &nbsp;</pre></td></tr></table></pre>
@@ -484,7 +484,7 @@ export const getEmployeesByDepartment = <span class="fstat-no" title="function n
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-09-25T06:22:07.953Z
+                at 2025-09-25T06:29:52.319Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
