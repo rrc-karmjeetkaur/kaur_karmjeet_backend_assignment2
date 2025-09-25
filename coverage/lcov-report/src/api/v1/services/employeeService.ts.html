@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">83.33% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>14/28</span>
+                <span class='fraction'>25/30</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>2/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">37.5% </span>
+                <span class="strong">87.5% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/8</span>
+                <span class='fraction'>7/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">40% </span>
+                <span class="strong">84.21% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>8/20</span>
+                <span class='fraction'>16/19</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -100,97 +100,88 @@
 <a name='L35'></a><a href='#L35'>35</a>
 <a name='L36'></a><a href='#L36'>36</a>
 <a name='L37'></a><a href='#L37'>37</a>
-<a name='L38'></a><a href='#L38'>38</a>
-<a name='L39'></a><a href='#L39'>39</a>
-<a name='L40'></a><a href='#L40'>40</a>
-<a name='L41'></a><a href='#L41'>41</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">1x</span>
+<a name='L38'></a><a href='#L38'>38</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Employee, employees, getNextEmployeeId } from "../../../data/employees";
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">interface Employee {
+  id: number;
+  name: string;
+  role: string;
+  email: string;
+}
 &nbsp;
-// Get all employees
-export const getAllEmployees = (): Employee[] =&gt; {
-  return employees;
-};
+let employees: Employee[] = [
+  { id: 1, name: "John Doe", role: "Developer", email: "john@example.com" },
+  { id: 2, name: "Jane Smith", role: "Manager", email: "jane@example.com" },
+];
 &nbsp;
-// Get employee by ID
-export const getEmployeeById = (id: number): Employee | undefined =&gt; {
-  return employees.find(emp =&gt; emp.id === id);
-};
+let nextEmployeeId = employees.length + 1;
 &nbsp;
-// Create a new employee
-export const createEmployee = <span class="fstat-no" title="function not covered" >(e</span>mp: Omit&lt;Employee, "id"&gt;): Employee =&gt; {
-  const newEmployee<span class="cstat-no" title="statement not covered" >: Employee = {</span>
-    id: getNextEmployeeId(),
-    ...emp
-  };
+export const getEmployees = (): Employee[] =&gt; employees;
+&nbsp;
+export const getEmployee = (id: number): Employee | undefined =&gt;
+  employees.find(emp =&gt; emp.id === id);
+&nbsp;
+export const createEmployee = <span class="fstat-no" title="function not covered" >(d</span>ata: Omit&lt;Employee, "id"&gt;): Employee =&gt; {
+  const newEmployee<span class="cstat-no" title="statement not covered" >: Employee = { id: nextEmployeeId++, ...data };</span>
 <span class="cstat-no" title="statement not covered" >  employees.push(newEmployee);</span>
 <span class="cstat-no" title="statement not covered" >  return newEmployee;</span>
 };
 &nbsp;
-// Update an employee
-export const updateEmployee = <span class="fstat-no" title="function not covered" >(i</span>d: number, updatedData: Partial&lt;Employee&gt;): Employee | undefined =&gt; {
-  const employee = <span class="cstat-no" title="statement not covered" >employees.find(<span class="fstat-no" title="function not covered" >emp </span>=&gt; <span class="cstat-no" title="statement not covered" >emp.id === id)</span>;</span>
-<span class="cstat-no" title="statement not covered" >  if (employee) {</span>
-<span class="cstat-no" title="statement not covered" >    Object.assign(employee, updatedData);</span>
-  }
-<span class="cstat-no" title="statement not covered" >  return employee;</span>
+export const updateEmployee = (id: number, data: Partial&lt;Omit&lt;Employee, "id"&gt;&gt;): Employee | null =&gt; {
+  const emp = employees.find(e =&gt; e.id === id);
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (!emp) <span class="cstat-no" title="statement not covered" >return null;</span>
+  Object.assign(emp, data);
+  return emp;
 };
 &nbsp;
-// Delete an employee
-export const deleteEmployee = <span class="fstat-no" title="function not covered" >(i</span>d: number): boolean =&gt; {
-  const index = <span class="cstat-no" title="statement not covered" >employees.findIndex(<span class="fstat-no" title="function not covered" >emp </span>=&gt; <span class="cstat-no" title="statement not covered" >emp.id === id)</span>;</span>
-<span class="cstat-no" title="statement not covered" >  if (index !== -1) {</span>
-<span class="cstat-no" title="statement not covered" >    employees.splice(index, 1);</span>
-<span class="cstat-no" title="statement not covered" >    return true;</span>
-  }
-<span class="cstat-no" title="statement not covered" >  return false;</span>
-};
-&nbsp;</pre></td></tr></table></pre>
+export const deleteEmployee = (id: number): boolean =&gt; {
+  const index = employees.findIndex(e =&gt; e.id === id);
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (index === -1) <span class="cstat-no" title="statement not covered" >return false;</span>
+  employees.splice(index, 1);
+  return true;
+};</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-09-25T00:18:34.734Z
+                at 2025-09-25T04:42:15.366Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

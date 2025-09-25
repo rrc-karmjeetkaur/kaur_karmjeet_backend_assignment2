@@ -43,7 +43,13 @@
     "testMatch": [
       "**/src/test/**/*.test.ts"
     ],
-    "moduleFileExtensions": ["ts", "js", "json"],
-    "roots": ["<rootDir>/src"]
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json"
+    ],
+    "roots": [
+      "<rootDir>/src"
+    ]
   }
 }

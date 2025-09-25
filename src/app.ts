@@ -1,21 +1,22 @@
-import express from 'express';
-import morgan from 'morgan';
+// src/app.ts
+import express from "express";
+import morgan from "morgan";
 
-import employeeRoutes from './api/v1/routes/employeeRoutes';
-import branchRoutes from './api/v1/routes/branchRoutes';
+import employeeRoutes from "./api/v1/routes/employeeRoutes";
+import branchRoutes from "./api/v1/routes/branchRoutes";
 
 const app = express();
 
 app.use(morgan("combined"));
 app.use(express.json());
 
-// Health check route
-app.get("/health", (req, res) => {
-  res.send("Server is healthy");
-});
+// Health check
+app.get("/health", (_req, res) => res.status(200).send("Server is healthy"));
 
-// Mount your API routes
-app.use("/employees", employeeRoutes);
-app.use("/branches", branchRoutes);
+// Mount both versions of the routes
+app.use("/api/v1/employees", employeeRoutes);
+app.use("/employees", employeeRoutes);   // <- add this
+app.use("/api/v1/branches", branchRoutes);
+app.use("/branches", branchRoutes);      // <- add this
 
 export default app;
