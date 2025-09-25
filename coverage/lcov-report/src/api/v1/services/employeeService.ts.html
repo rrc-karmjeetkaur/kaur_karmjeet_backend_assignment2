@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">60.86% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>14/23</span>
+                <span class='fraction'>14/28</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">40% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>7/14</span>
+                <span class='fraction'>8/20</span>
             </div>
         
             
@@ -93,27 +93,36 @@
 <a name='L28'></a><a href='#L28'>28</a>
 <a name='L29'></a><a href='#L29'>29</a>
 <a name='L30'></a><a href='#L30'>30</a>
-<a name='L31'></a><a href='#L31'>31</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -122,36 +131,57 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { employees, Employee } from "../../../data/employees";
-import { branches, Branch } from "../../../data/branches";
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Employee, employees, getNextEmployeeId } from "../../../data/employees";
 &nbsp;
 // Get all employees
-export const getAllEmployees = (): Employee[] =&gt; employees;
-&nbsp;
-// Get employee by ID
-export const getEmployeeById = (id: number): Employee | undefined =&gt;
-  employees.find((emp: Employee) =&gt; emp.id === id);
-&nbsp;
-// Add a new employee
-export const addEmployee = <span class="fstat-no" title="function not covered" >(e</span>mployee: Employee): void =&gt; {
-<span class="cstat-no" title="statement not covered" >  employees.push(employee);</span>
+export const getAllEmployees = (): Employee[] =&gt; {
+  return employees;
 };
 &nbsp;
-// Update an existing employee
-export const updateEmployee = <span class="fstat-no" title="function not covered" >(i</span>d: number, updatedData: Partial&lt;Employee&gt;): void =&gt; {
-  const index = <span class="cstat-no" title="statement not covered" >employees.findIndex(<span class="fstat-no" title="function not covered" >(e</span>mp: Employee) =&gt; <span class="cstat-no" title="statement not covered" >emp.id === id)</span>;</span>
-<span class="cstat-no" title="statement not covered" >  if (index !== -1) {</span>
-<span class="cstat-no" title="statement not covered" >    employees[index] = { ...employees[index], ...updatedData };</span>
+// Get employee by ID
+export const getEmployeeById = (id: number): Employee | undefined =&gt; {
+  return employees.find(emp =&gt; emp.id === id);
+};
+&nbsp;
+// Create a new employee
+export const createEmployee = <span class="fstat-no" title="function not covered" >(e</span>mp: Omit&lt;Employee, "id"&gt;): Employee =&gt; {
+  const newEmployee<span class="cstat-no" title="statement not covered" >: Employee = {</span>
+    id: getNextEmployeeId(),
+    ...emp
+  };
+<span class="cstat-no" title="statement not covered" >  employees.push(newEmployee);</span>
+<span class="cstat-no" title="statement not covered" >  return newEmployee;</span>
+};
+&nbsp;
+// Update an employee
+export const updateEmployee = <span class="fstat-no" title="function not covered" >(i</span>d: number, updatedData: Partial&lt;Employee&gt;): Employee | undefined =&gt; {
+  const employee = <span class="cstat-no" title="statement not covered" >employees.find(<span class="fstat-no" title="function not covered" >emp </span>=&gt; <span class="cstat-no" title="statement not covered" >emp.id === id)</span>;</span>
+<span class="cstat-no" title="statement not covered" >  if (employee) {</span>
+<span class="cstat-no" title="statement not covered" >    Object.assign(employee, updatedData);</span>
   }
+<span class="cstat-no" title="statement not covered" >  return employee;</span>
 };
 &nbsp;
 // Delete an employee
-export const deleteEmployee = <span class="fstat-no" title="function not covered" >(i</span>d: number): void =&gt; {
-  const index = <span class="cstat-no" title="statement not covered" >employees.findIndex(<span class="fstat-no" title="function not covered" >(e</span>mp: Employee) =&gt; <span class="cstat-no" title="statement not covered" >emp.id === id)</span>;</span>
+export const deleteEmployee = <span class="fstat-no" title="function not covered" >(i</span>d: number): boolean =&gt; {
+  const index = <span class="cstat-no" title="statement not covered" >employees.findIndex(<span class="fstat-no" title="function not covered" >emp </span>=&gt; <span class="cstat-no" title="statement not covered" >emp.id === id)</span>;</span>
 <span class="cstat-no" title="statement not covered" >  if (index !== -1) {</span>
 <span class="cstat-no" title="statement not covered" >    employees.splice(index, 1);</span>
+<span class="cstat-no" title="statement not covered" >    return true;</span>
   }
+<span class="cstat-no" title="statement not covered" >  return false;</span>
 };
 &nbsp;</pre></td></tr></table></pre>
 
@@ -160,7 +190,7 @@ export const deleteEmployee = <span class="fstat-no" title="function not covered
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-09-24T23:38:47.706Z
+                at 2025-09-25T00:05:40.136Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

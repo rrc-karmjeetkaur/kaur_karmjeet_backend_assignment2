@@ -1,34 +1,44 @@
-import express from "express";
-import { getAllEmployees, getEmployeeById, addEmployee, updateEmployee, deleteEmployee } from "../services/employeeService";
+import { Router } from "express";
+import {
+  getAllEmployees,
+  getEmployeeById,
+  createEmployee,
+  updateEmployee,
+  deleteEmployee
+} from "../services/employeeService";
 
-const router = express.Router();
+const router = Router();
 
-router.get("/", (req, res) => res.json(getAllEmployees()));
-
-router.get("/:id", (req, res) => {
-  const id = parseInt(req.params.id);
-  const employee = getEmployeeById(id);
-  if (employee) res.json(employee);
-  else res.status(404).json({ message: "Employee not found" });
+// Get all employees
+router.get("/", (req, res) => {
+  res.json(getAllEmployees());
 });
 
+// Get employee by ID
+router.get("/:id", (req, res) => {
+  const employee = getEmployeeById(Number(req.params.id));
+  if (!employee) return res.status(404).json({ message: "Employee not found" });
+  res.json(employee);
+});
+
+// Create new employee
 router.post("/", (req, res) => {
-  const newEmployee = req.body;
-  addEmployee(newEmployee);
+  const newEmployee = createEmployee(req.body);
   res.status(201).json(newEmployee);
 });
 
+// Update employee
 router.put("/:id", (req, res) => {
-  const id = parseInt(req.params.id);
-  const updatedData = req.body;
-  updateEmployee(id, updatedData);
-  res.json({ message: "Employee updated" });
+  const updatedEmployee = updateEmployee(Number(req.params.id), req.body);
+  if (!updatedEmployee) return res.status(404).json({ message: "Employee not found" });
+  res.json(updatedEmployee);
 });
 
+// Delete employee
 router.delete("/:id", (req, res) => {
-  const id = parseInt(req.params.id);
-  deleteEmployee(id);
-  res.json({ message: "Employee deleted" });
+  const deleted = deleteEmployee(Number(req.params.id));
+  if (!deleted) return res.status(404).json({ message: "Employee not found" });
+  res.json({ message: "Employee deleted successfully" });
 });
 
 export default router;
