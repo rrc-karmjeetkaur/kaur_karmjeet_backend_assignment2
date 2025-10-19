@@ -37,12 +37,7 @@
     "express": "^5.1.0",
     "morgan": "^1.10.1"
   },
-  "jest": {
-    "preset": "ts-jest",
-    "testEnvironment": "node",
-    "testMatch": [
-      "**/src/test/**/*.test.ts"
-    ],
+  
     "moduleFileExtensions": [
       "ts",
       "js",
@@ -55,4 +50,4 @@
       "<rootDir>/src/test/jest.setup.ts"
     ]
   }
-}
+
