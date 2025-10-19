@@ -8,15 +8,19 @@ import {
   getEmployeesByBranch,    
   getEmployeesByDepartment 
 } from "../controllers/employeeController";
+import { validate } from "../middleware/validate";
+import { employeeSchema } from "../validation/employeeValidation";
 
 const router = express.Router();
 
+// Employee CRUD routes
 router.get("/", getAllEmployees);
 router.get("/:id", getEmployeeById);
-router.post("/", createEmployee);
-router.put("/:id", updateEmployee);
+router.post("/", validate(employeeSchema), createEmployee); // Validation added
+router.put("/:id", validate(employeeSchema), updateEmployee); // Validation added
 router.delete("/:id", deleteEmployee);
-// New routes for Step 6
+
+// Routes for filtering by branch or department
 router.get("/branch/:branchId", getEmployeesByBranch);
 router.get("/department/:department", getEmployeesByDepartment);
 
