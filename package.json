@@ -1,14 +1,13 @@
 {
   "name": "kaur_karmjeet_backend_assignment2",
   "version": "1.0.0",
-  "description": "Backend Assignment 2 - Employee Directory and Branch Management API",
+  "description": "Backend Assignment 2 - Employee and Branch Management API",
   "main": "src/app.ts",
   "scripts": {
-    "start": "ts-node src/app.ts",
-    "build": "tsc",
-    "test": "jest --coverage",
     "dev": "ts-node-dev --respawn src/app.ts",
-    "debug": "node --inspect-brk -r ts-node/register src/app.ts"
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "test": "jest --runInBand"
   },
   "repository": {
     "type": "git",
@@ -51,6 +50,9 @@
     ],
     "roots": [
       "<rootDir>/src"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/test/jest.setup.ts"
     ]
   }
 }
