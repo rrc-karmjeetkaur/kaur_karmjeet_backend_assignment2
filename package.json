@@ -35,19 +35,18 @@
   "dependencies": {
     "@types/express": "^5.0.3",
     "express": "^5.1.0",
+    "joi": "^18.0.1",
     "morgan": "^1.10.1"
   },
-  
-    "moduleFileExtensions": [
-      "ts",
-      "js",
-      "json"
-    ],
-    "roots": [
-      "<rootDir>/src"
-    ],
-    "setupFilesAfterEnv": [
-      "<rootDir>/src/test/jest.setup.ts"
-    ]
-  }
-
+  "moduleFileExtensions": [
+    "ts",
+    "js",
+    "json"
+  ],
+  "roots": [
+    "<rootDir>/src"
+  ],
+  "setupFilesAfterEnv": [
+    "<rootDir>/src/test/jest.setup.ts"
+  ]
+}
